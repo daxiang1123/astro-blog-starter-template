@@ -31,10 +31,13 @@ import { SITE_TITLE } from '../consts';
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		height: 60px;
+		box-sizing: border-box;
 	}
 	h2 {
 		margin: 0;
 		font-size: 1em;
+		flex-shrink: 0;
 	}
 
 	h2 a,
@@ -45,12 +48,15 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		height: 100%;
 	}
 	nav a {
-		padding: 1em 0.5em;
+		padding: 0 0.5em;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+		line-height: 56px;
+		white-space: nowrap;
 	}
 	nav a.active {
 		text-decoration: none;
@@ -59,10 +65,15 @@ import { SITE_TITLE } from '../consts';
 	.social-links,
 	.social-links a {
 		display: flex;
+		align-items: center;
 	}
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		nav a {
+			padding: 0 0.35em;
+			font-size: 0.95em;
 		}
 	}
 </style>
